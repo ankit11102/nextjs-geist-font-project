@@ -1,0 +1,172 @@
+/* Enhanced AI Message Formatting */
+.message-content p {
+    margin: 0.5rem 0;
+    line-height: 1.6;
+}
+
+.message-content p:first-child {
+    margin-top: 0;
+}
+
+.message-content p:last-child {
+    margin-bottom: 0;
+}
+
+.message-content strong {
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.message-content em {
+    font-style: italic;
+    color: var(--text-secondary);
+}
+
+.message-content br + strong {
+    display: inline-block;
+    margin-top: 0.5rem;
+}
+
+.ai-message .message-content {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 1rem;
+}
+
+.ai-message .message-content ul,
+.ai-message .message-content ol {
+    margin: 0.5rem 0;
+    padding-left: 1.5rem;
+}
+
+.ai-message .message-content li {
+    margin: 0.25rem 0;
+}
+
+/* Environment Configuration Notice */
+.env-notice {
+    background: linear-gradient(135deg, #fef3c7, #fde68a);
+    border: 1px solid #f59e0b;
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 1rem 0;
+    color: #92400e;
+}
+
+.env-notice h4 {
+    margin: 0 0 0.5rem 0;
+    color: #78350f;
+    font-weight: 600;
+}
+
+.env-notice code {
+    background: rgba(120, 53, 15, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+}
+
+/* Code Block Formatting */
+.message-content pre {
+    background: var(--surface);
+    border-radius: 8px;
+    padding: 1rem;
+    margin: 0.5rem 0;
+    overflow-x: auto;
+}
+
+/* File Upload States */
+.file-status {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.file-status .loading {
+    width: 16px;
+    height: 16px;
+    border: 2px solid var(--border);
+    border-top-color: var(--primary-color);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+.file-status .text-success {
+    color: #10b981;
+}
+
+.file-status .text-error {
+    color: #ef4444;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* File Processing States */
+.file-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    margin-bottom: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.file-item.processing {
+    border-color: var(--primary-color);
+    background: rgba(59, 130, 246, 0.05);
+}
+
+.file-item.success {
+    border-color: #10b981;
+    background: rgba(16, 185, 129, 0.05);
+}
+
+.file-item.error {
+    border-color: #ef4444;
+    background: rgba(239, 68, 68, 0.05);
+}
+
+.message-content code {
+    font-family: 'Courier New', monospace;
+    font-size: 0.875rem;
+    background: rgba(59, 130, 246, 0.1);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+}
+
+/* Markdown Table Formatting */
+.message-content table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 1rem 0;
+}
+
+.message-content th,
+.message-content td {
+    padding: 0.75rem;
+    border: 1px solid var(--border);
+    text-align: left;
+}
+
+.message-content th {
+    background: var(--surface);
+    font-weight: 600;
+}
+
+/* Quote Formatting */
+.message-content blockquote {
+    border-left: 4px solid var(--primary-color);
+    margin: 1rem 0;
+    padding: 0.5rem 0 0.5rem 1rem;
+    color: var(--text-secondary);
+    font-style: italic;
+}
